@@ -34,6 +34,12 @@ Roughly:
 
 * **uWSGI** is an application server, that's what runs your Python code and it talks with Nginx.
 
+* **flask** is a python web framework
+
+* **pycrypto** is a python cryptography library
+
+* **certbot** is a let's encrypt client to get and renew server certificates
+
 * **Your Python code** has the actual web application, and is run by uWSGI.
 
 This image takes advantage of already slim and optimized existing Docker images (based on Debian as [recommended by Docker](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)) and implements Docker best practices.
