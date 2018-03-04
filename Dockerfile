@@ -4,7 +4,7 @@ RUN \
   apt-get update && \
   apt-get install -y -q --no-install-recommends ca-certificates \ 
   git nginx gettext-base python3 python3-setuptools python3-dev \
-  python3-pip build-essential certbot \
+  python3-pip build-essential \
   python python-dev python-setuptools && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/*
@@ -32,7 +32,9 @@ RUN rm /etc/nginx/sites-enabled/default
 COPY nginx.conf /etc/nginx/conf.d/
 
 # Install Supervisord
-RUN apt-get install -y supervisor && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y supervisor && rm -rf /var/lib/apt/lists/*
+
+# RUN apt-get update && apt-get install certbot && rm -rf /var/lib/apt/lists/*
 
 # Custom Supervisord config
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
