@@ -12,13 +12,7 @@ This [**Docker**](https://www.docker.com/) image allows you to create [**Python*
 
 uWSGI with Nginx is one of the best ways to deploy a Python application, so you you should have a [good performance (check the benchmarks)](http://nichol.as/benchmark-of-python-web-servers) with this image.
 
-This image was created to be the base image for [**tiangolo/uwsgi-nginx-flask**](https://hub.docker.com/r/tiangolo/uwsgi-nginx-flask/) but could be used as the base image to run any Python web application.
-
-If you are creating a new [**Flask**](http://flask.pocoo.org/) web application you should use [**tiangolo/uwsgi-nginx-flask**](https://hub.docker.com/r/tiangolo/uwsgi-nginx-flask/) instead.
-
-**GitHub repo**: <https://github.com/tiangolo/uwsgi-nginx-docker>
-
-**Docker Hub image**: <https://hub.docker.com/r/tiangolo/uwsgi-nginx/>
+This image was created based on [**psynautic**](psynautic/rpi-uwsgi-nginx-docker)
 
 ## What's new
 
@@ -39,6 +33,10 @@ Roughly:
 * **Nginx** is a web server, it takes care of the HTTP connections and also can serve static files directly and more efficiently.
 
 * **uWSGI** is an application server, that's what runs your Python code and it talks with Nginx.
+
+* **flask** is a python web framework
+
+* **pycrypto** is a python cryptography library
 
 * **Your Python code** has the actual web application, and is run by uWSGI.
 
