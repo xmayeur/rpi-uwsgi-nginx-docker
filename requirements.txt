@@ -4,3 +4,8 @@ python_dateutil == 2.6.0
 setuptools >= 21.0.0
 pycrypto
 flask
+flask_login
+flask_migrate
+flask_sqlalchemy
+flask_wtf
+
